@@ -20,6 +20,8 @@ app.use('/subdir', express.static(path.join(__dirname, '/public')))
 app.use('/', require('./routes/root'))
 app.use('/subdir', require('./routes/subdir'))
 app.use('/employees', require('./routes/api/employees'))
+app.use('/users', require('./routes/auth/register'))
+app.use('/auth', require('./routes/auth/auth'))
 app.all('*', (req, res) => {
   res.status(404)
   if (req.accepts('html')) {

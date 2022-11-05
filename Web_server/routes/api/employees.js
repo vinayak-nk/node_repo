@@ -12,6 +12,7 @@ router.route('/')
 .delete(employeesController.deleteEmployee)
 
 router.route('/:id')
-  .get(employeesController.getEmployee)
+.get(employeesController.getEmployee)
+.delete(employeesController.deleteEmployee)
 
 module.exports = router
